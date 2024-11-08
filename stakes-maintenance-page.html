@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en" class="x7-maintenance-page">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Maintenance: Enhancing Your Experience – We’ll Be Back Soon!</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="https://kgc-igpcms-production.s3.eu-central-1.amazonaws.com/x7c/pages/stakes%20icon%2032x32_e63322df97.webp"
+    />
+    <style>
+      .x7-maintenance-page * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+
+      .x7-maintenance-background {
+        background-image: url(https://kgc-igpcms-production.s3.eu-central-1.amazonaws.com/x7c/pages/EN%20-%20MAINTENANCE%20PAGE%20BANNER_17b032f980.webp);
+        background-size: cover; /* Cover the entire area of the element */
+        background-position: center; /* Center the image in the element */
+        background-repeat: no-repeat; /* Do not repeat the image */
+        width: 100%; /* Stretch to the full width of the viewport */
+        min-height: 100vh; /* Minimum height to cover the viewport height */
+        position: fixed; /* Optional: Fix the position relative to the viewport */
+        top: 0;
+        left: 0;
+        z-index: -1; /* Optional: Ensure it stays in the background */
+      }
+
+      .language-buttons {
+        position: absolute;
+        top: 20px; /* Adjust this value based on your header's height */
+        right: 20px;
+        display: flex;
+        gap: 10px;
+      }
+
+      .language-buttons a {
+        display: inline-block;
+        transition: transform 0.3s ease;
+      }
+
+      .language-buttons a:hover {
+        transform: scale(1.1);
+      }
+
+      .language-buttons img {
+        width: 30px; /* You can adjust the size as needed */
+        height: 30px;
+        border-radius: 50%;
+      }
+
+      .x7-maintenance-main {
+        display: flex; /* Make this a flex container */
+        align-items: center;
+        justify-content: center; /* Align content to the left */
+        flex-direction: row;
+      }
+
+      @media (min-width: 1024px) {
+        .language-buttons img {
+          width: 40px; /* You can adjust the size as needed */
+          height: 40px;
+        }
+      }
+
+      @media (min-width: 1920px) {
+        .language-buttons img {
+          width: 50px; /* You can adjust the size as needed */
+          height: 50px;
+        }
+      }
+
+      @media (max-width: 991px) {
+        .x7-maintenance-background {
+          background-image: url(https://kgc-igpcms-production.s3.eu-central-1.amazonaws.com/x7c/pages/EN%20-%20MAINTENANCE%20PAGE%20BANNER%20-%20TABLET%20SIZE_e1784a7ebe.webp);
+          background-position: top center; /* Adjust position for mobile */
+          background-repeat: no-repeat; /* Ensure no tiling */
+        }
+      }
+
+      @media (max-width: 576px) {
+        .x7-maintenance-background {
+          background-image: url(https://kgc-igpcms-production.s3.eu-central-1.amazonaws.com/x7c/pages/EN%20-%20MAINTENANCE%20PAGE%20BANNER%20-%20MOBILE%20SIZE_4d67bb5e2a.webp);
+          background-position: top center; /* Adjust position for mobile */
+          background-repeat: no-repeat; /* Ensure no tiling */
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="x7-maintenance-background" id="background-image"></div>
+    <div class="language-buttons">
+      <a href="#" onclick="changeBackground('en')"
+        ><img
+          src="https://x1casino.com/wp-content/plugins/gtranslate/flags/svg/en.svg"
+          alt="English"
+      /></a>
+      <a href="#" onclick="changeBackground('de')"
+        ><img
+          src="https://x1casino.com/wp-content/plugins/gtranslate/flags/svg/de.svg"
+          alt="German"
+      /></a>
+      <a href="#" onclick="changeBackground('fr')"
+        ><img
+          src="https://x1casino.com/wp-content/plugins/gtranslate/flags/svg/fr.svg"
+          alt="French"
+      /></a>
+      <a href="#" onclick="changeBackground('es')"
+        ><img
+          src="https://x1casino.com/wp-content/plugins/gtranslate/flags/svg/es.svg"
+          alt="Spanish"
+      /></a>
+      <a href="#" onclick="changeBackground('it')"
+        ><img
+          src="https://kgc-igpcms-production.s3.eu-central-1.amazonaws.com/x7c/pages/italy_14e992cc12.svg"
+          alt="Italian"
+      /></a>
+    </div>
+
+    <script>
+      function changeBackground(language) {
+        const backgroundImage = document.getElementById("background-image");
+
+        // Images for different languages based on desktop
+        const desktopImages = {
+          en: "https://kgc-igpcms-production.s3.eu-central-1.amazonaws.com/x7c/pages/EN%20-%20MAINTENANCE%20PAGE%20BANNER_17b032f980.webp",
+          de: "https://kgc-igpcms-production.s3.eu-central-1.amazonaws.com/x7c/pages/DE%20-%20MAINTENANCE%20PAGE%20BANNER_2cc4945e7a.webp",
+          fr: "https://kgc-igpcms-production.s3.eu-central-1.amazonaws.com/x7c/pages/FR%20-%20MAINTENANCE%20PAGE%20BANNER_6e57d6780a.webp",
+          es: "https://kgc-igpcms-production.s3.eu-central-1.amazonaws.com/x7c/pages/ES%20-%20MAINTENANCE%20PAGE%20BANNER_c55f46e445.webp",
+          it: "https://kgc-igpcms-production.s3.eu-central-1.amazonaws.com/x7c/pages/MAINTENANCE%20PAGE%20BANNER%20-%20WEB_c887490433.webp",
+        };
+
+        // Images for different languages based on tablet (577px to 991px)
+        const tabletImages = {
+          en: "https://kgc-igpcms-production.s3.eu-central-1.amazonaws.com/x7c/pages/EN%20-%20MAINTENANCE%20PAGE%20BANNER%20-%20TABLET%20SIZE_e1784a7ebe.webp",
+          de: "https://kgc-igpcms-production.s3.eu-central-1.amazonaws.com/x7c/pages/DE%20-MAINTENANCE%20PAGE%20BANNER%20-%20TABLET%20SIZE_3b7b3f9770.webp",
+          fr: "https://kgc-igpcms-production.s3.eu-central-1.amazonaws.com/x7c/pages/FR%20-%20MAINTENANCE%20PAGE%20BANNER%20-%20TABLET%20SIZE_eefd417e27.webp",
+          es: "https://kgc-igpcms-production.s3.eu-central-1.amazonaws.com/x7c/pages/ES%20-%20MAINTENANCE%20PAGE%20BANNER%20-%20TABLET%20SIZE_880af9baad.webp",
+          it: "https://kgc-igpcms-production.s3.eu-central-1.amazonaws.com/x7c/pages/MAINTENANCE%20PAGE%20BANNER%20-%20TABLET_6d94ec1964.webp",
+        };
+
+        // Images for different languages based on mobile (576px and below)
+        const mobileImages = {
+          en: "https://kgc-igpcms-production.s3.eu-central-1.amazonaws.com/x7c/pages/EN%20-%20MAINTENANCE%20PAGE%20BANNER%20-%20MOBILE%20SIZE_4d67bb5e2a.webp",
+          de: "https://kgc-igpcms-production.s3.eu-central-1.amazonaws.com/x7c/pages/DE%20-%20MAINTENANCE%20PAGE%20BANNER%20-%20MOBILE%20SIZE_a35b946bfb.webp",
+          fr: "https://kgc-igpcms-production.s3.eu-central-1.amazonaws.com/x7c/pages/FR%20-%20MAINTENANCE%20PAGE%20BANNER%20-%20MOBILE%20SIZE_bdfad9de7e.webp",
+          es: "https://kgc-igpcms-production.s3.eu-central-1.amazonaws.com/x7c/pages/ES%20-%20MAINTENANCE%20PAGE%20BANNER%20-%20MOBILE%20SIZE_cf50c44a34.webp",
+          it: "https://kgc-igpcms-production.s3.eu-central-1.amazonaws.com/x7c/pages/MAINTENANCE%20PAGE%20BANNER%20-%20MOBILE%20SIZE_2d0c964e85.webp",
+        };
+
+        // Detect screen width
+        const screenWidth = window.innerWidth;
+
+        // Check if screen width is mobile size (576px or less)
+        if (screenWidth <= 576) {
+          backgroundImage.style.backgroundImage = `url(${mobileImages[language]})`;
+        }
+        // Check if screen width is tablet size (between 577px and 768px)
+        else if (screenWidth > 576 && screenWidth <= 991) {
+          backgroundImage.style.backgroundImage = `url(${tabletImages[language]})`;
+        }
+        // Otherwise, use desktop image
+        else {
+          backgroundImage.style.backgroundImage = `url(${desktopImages[language]})`;
+        }
+      }
+    </script>
+  </body>
+</html>
